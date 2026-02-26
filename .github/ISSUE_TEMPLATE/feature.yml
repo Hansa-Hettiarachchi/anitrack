@@ -1,0 +1,29 @@
+name: Feature
+description: New feature or capability
+title: "[M?] <short title>"
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What this feature achieves
+    validations:
+      required: true
+  - type: checkboxes
+    id: ac
+    attributes:
+      label: Acceptance Criteria
+      description: Must be true to close the issue
+      options:
+        - label: Builds locally
+        - label: Handles edge cases
+        - label: UI/UX reviewed (if applicable)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Edge cases
+  - type: textarea
+    id: out
+    attributes:
+      label: Out of scope
