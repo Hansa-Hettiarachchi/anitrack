@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -52,4 +54,31 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+
+    // Media3 - Video player
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.session)
+    implementation(libs.media3.ui)
+    implementation(libs.media3.ui.compose)
+
+    // Room - Local database
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
+
+    // Hilt - Dependency injection
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt.viewmodel.compose)
+
+    // Navigation Compose
+    implementation(libs.navigation.compose)
+
+    // DataStore - User preferences
+    implementation(libs.datastore.preferences)
+
+    // Coil - Anime posters
+//    implementation(libs.coil.compose)
+//    implementation(libs.coil.network.okhttp)
+
 }
